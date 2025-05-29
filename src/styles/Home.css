@@ -1,0 +1,214 @@
+/* Mantendo a Home original */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 140px;
+  gap: 50px;
+  background-color: white;
+}
+
+/* Estilos da Home */
+.home-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  color: #13293E;
+  font-style: normal;
+  font-weight: 100;
+  margin-bottom: 2px;
+  margin-right: 90px;
+}
+
+.home-logo {
+  width: 250px;
+}
+
+.home-description {
+  font-size: 1.1rem;
+  max-width: 400px;
+  color: #13293E;
+  text-align: left;
+}
+
+/* Faixa laranja */
+.highlight-banner {
+  background-color: #C0754D;
+  color: white;
+  padding: 60px;
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Seção "Por que escolher a Neven?" */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 200px; /* Mais espaço antes do footer */
+  position: relative;
+}
+
+/* Cada item */
+.feature {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+  position: relative;
+  min-height: 180px; /* Garante que os triângulos fiquem bem posicionados */
+}
+
+/* Texto */
+.feature-text {
+  max-width: 350px;
+  z-index: 2;
+  position: relative;
+  
+}
+
+.feature-text h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #13293E;
+}
+
+.feature-text p {
+  font-size: 20px;
+  color: #13293E;
+}
+
+/* Centraliza o segundo texto */
+.feature:nth-child(2) .feature-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Texto à esquerda */
+.feature:nth-child(odd) .feature-text {
+  text-align: left;
+  margin-left: 250px;
+  margin-top: 50px;
+}
+
+/* Texto à direita */
+.feature:nth-child(even) .feature-text {
+  text-align: right;
+  margin-left: 750px;
+  margin-bottom: 55px;
+}
+
+.feature:last-child .feature-text {
+  margin-left: 250px; /* Mantém a posição lateral */
+  margin-top: -90px; /* Aumente o valor negativo para subir mais */
+
+}
+
+
+/* Triângulos */
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+}
+
+/* Primeiro triângulo - encostado na direita e abaixo da faixa */
+.feature:first-child .triangle {
+  border-width: 210px 300px 210px 0;
+  border-color: transparent #1C4E6C transparent transparent;
+  right: -5px;
+  top: -120px; /* Ajusta para ficar abaixo da faixa */
+}
+
+/* Segundo triângulo - encostado na esquerda */
+.feature:nth-child(2) .triangle {
+  border-width: 210px 0 210px 300px;
+  border-color: transparent transparent transparent #1C4E6C;
+  left: -5px;
+}
+
+/* Terceiro triângulo - encostado na direita */
+.feature:nth-child(3) .triangle {
+  border-width: 210px 300px 210px 0;
+  border-color: transparent #1C4E6C transparent transparent;
+  right: -5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .feature {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .feature-text {
+      max-width: 90%;
+      text-align: center;
+  }
+
+  .triangle {
+      display: none;
+  }
+}
+
+ /* Citação */
+ .faq-quote {
+  font-size: 50px;
+  font-style: italic;
+  color: #c0754d;
+  margin-bottom: 20px;
+  margin-top: -15px;
+}
+
+
+/* ===== Seção “Conecte‑se” ===== */
+.conecte-se-section {
+  background-color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -190px;
+}
+
+.conecte-se-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2.8rem;
+  color: #C0754D; 
+  margin-bottom: 40px;
+}
+
+.logo-n {
+  width: 200px;
+  height: auto;
+}
+
+.conecte-se-content p {
+  font-size: 20px;
+  color: #333333;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  text-align: left;
+  margin-right: 400px;
+  margin-left: 360px;
+  
+}
+
+.conecte-se-content a {
+  color: #C0754D;
+  text-decoration: underline;
+}
+
+.conecte-se-content a:hover {
+  color: #A05A3C;
+}
+/* ============================= */

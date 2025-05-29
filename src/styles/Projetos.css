@@ -1,0 +1,130 @@
+/* Container principal */
+.projetos-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* Título principal e descrição */
+  .projetos-container h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .descricao {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Estilo geral para as fileiras */
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  /* Para fileira 1 e 2: layout em duas colunas em telas maiores */
+  @media (min-width: 768px) {
+    .row.row1 {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+  }
+  .row.row2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Bloco de texto */
+  .text-block {
+    flex: 1;
+  }
+  
+  .text-block h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-block p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Bloco de imagem/vídeo */
+  .image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; /* em telas pequenas */
+  }
+  
+  @media (min-width: 768px) {
+    .row.row1 .image-block,
+    .row.row2 .image-block {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+  
+  /* Placeholder padrão para imagens/vídeos */
+  .image-placeholder {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* Fileira 3: Bloco grande */
+  .row.row3 {
+    flex-direction: column;
+  }
+  
+  .row3 .full {
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Placeholder grande para fileira 3 */
+  .large-image-placeholder {
+    margin-top: 1rem;
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* Link de acesso */
+  .link-acesso {
+    text-align: left;
+    margin-top: 0.5rem;
+
+  }
+  
+  .link-acesso a {
+    text-decoration: underline;
+    color: #007BFF;
+    font-weight: bold;
+   
+  }
+  
+  .link-acesso a:hover {
+    text-decoration: underline;
+  }
+  

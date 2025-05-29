@@ -1,0 +1,76 @@
+/* COMEÇO DO FOOTER */
+/* Footer alinhado corretamente */
+footer {
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  
+  /* Faixa laranja no topo do footer */
+  .footer-top-bar {
+    background-color: #C0754D;
+    height: 7px;
+    width: 100%;
+  }
+  
+  /* Área principal do footer */
+  .footer-content {
+    background-color: #1C4E6C; /* Cor azul principal */
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e links à direita */
+    align-items: center;
+    padding: 30px 140px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Estiliza a logo do footer */
+  .footer-logo img {
+    height: 70px;
+  }
+  
+  /* Organização das seções do footer */
+  .footer-links {
+    display: flex;
+    gap: 60px;
+  }
+  
+  /* Cada seção de links */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .footer-section h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-weight: normal;
+  }
+  
+  /* Ícones das redes sociais */
+  .footer-social img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Faixa azul escura no final do footer */
+  .footer-bottom-bar {
+    background: linear-gradient(#296581 3px, #306781 12px);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  /* fim do footer */

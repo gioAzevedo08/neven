@@ -1,0 +1,282 @@
+.sobre-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+  }
+  
+  /* Título centralizado no topo */
+  .sobre-topo {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 100;
+  }
+  
+  .sobre-title {
+    font-size: 2.5rem;
+    color: #13293e;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .sobre-title .logo-n {
+    width: 250px;
+    vertical-align: middle;
+    margin: 0 6px;
+  }
+  
+  /* Seção Triângulo + Texto */
+  .sobre-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinha verticalmente */
+    padding-left: 500px;
+    padding-right: 60px;
+    margin-top: 0; /* sobe a seção */
+    min-height: 400px; /* altura adequada sem invadir footer */
+  }
+  
+  .sobre-left {
+    width: 0;
+    height: 0;
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 600px solid #2c6d8f;
+    position: absolute;
+    top: 0; /* sobe o triângulo */
+    left: 0;
+    z-index: 1;
+    margin-top: -100px;
+  }
+  
+  .sobre-left-text {
+    position: absolute;
+    top: 50%;
+    left: -400px; /* posiciona dentro do triângulo */
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    max-width: 220px;
+    z-index: 2;
+  }
+  
+  /* Texto à direita */
+  .sobre-right {
+    width: 60%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 3;
+    margin-left: 150px;
+  }
+  
+  .sobre-text p {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+   
+  }
+  
+  .sobre-list h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 16px;
+  }
+  
+  .sobre-list ul {
+    list-style: disc inside;
+    padding-left: 0;
+    color: #333333;
+  }
+  
+  .sobre-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Faixa Laranja */
+.missao-banner {
+  margin-top: 50px;
+  background-color: #C0754D;
+  color: white;
+  padding: 70px;
+  font-size: 80px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.missao-banner p {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2;
+  font-weight: 100;
+  margin-right: 90px;
+  margin-left: 90px;
+}
+
+.missao-topo {
+  text-align: center;
+  margin-top:200px;
+ 
+}
+.missao-topo h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #13293e;
+  font-weight:900;
+}
+
+
+  /* outra parte */
+ 
+  /* full‑bleed wrapper */
+.missao-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -100vw;
+  box-sizing: border-box;
+}
+
+
+
+/* ====== SEÇÃO DOS TRIÂNGULOS ====== */
+.missao-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;     /* permite o triângulo direito “cair” */
+  padding: 0 0vw;              /* reduz o gap lateral para aproximar */
+  height: 600px;               /* aumenta a altura geral */
+  box-sizing: border-box;
+  margin-top: -200px;
+}
+
+/* base comum dos dois triângulos */
+.triangulo-esquerda,
+.triangulo-direita {
+  flex: 0 0 45%;               /* cada um ocupa 45% da largura */
+  height: 100%;
+  position: relative;
+  background: #2c6d8f;
+  display: flex;
+  align-items: center;
+}
+
+/* forma de triângulo */
+.triangulo-esquerda {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.triangulo-direita {
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  margin-top: 100px;            /* desce o triângulo da direita */
+}
+
+/* texto interno */
+.texto-esquerda,
+.texto-direita {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 40%;
+}
+
+/* alinhamento horizontal */
+.texto-esquerda {
+  right: 30%;                  /* aproxima da ponta interna */
+  text-align: left;
+  
+}
+
+.texto-direita {
+  left: 40%;
+  text-align: right;
+}
+
+
+/* area participantes //////////////////////////////////////////// */
+
+/* ——— Time NEVEN ——— */
+.time-section {
+  margin: 80px 0 120px;
+  padding: 0 60px; /* igual ao restante da sua página, ajuste se necessário */
+}
+
+.time-title {
+  font-size: 2.8rem;
+  color: #13293e;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.time-title .logo-n {
+  width: 200px;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+/* grid com 3 colunas, sobra espaço na última célula */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* cartão de cada participante */
+.time-card {
+  max-width: 260px;
+  text-align: left;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #d3d3d3;
+  border: 2px solid #C0754D;
+  border-radius: 50%;
+  margin: 10 auto 22px;
+}
+
+.time-name {
+  font-size: 1.4rem;
+  color: #C0754D;
+  margin: 8px 0 4px;
+}
+
+.time-role {
+  font-size: 1.1rem;
+  color: #13293e;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.time-description {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.4;
+  margin: 0;
+}
+/* —————————————— */
+.slogan-sobre p {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 2;
+  font-weight: 100;
+  margin-right: 90px;
+  margin-left: 90px;
+  color: #2c6d8f;
+}
