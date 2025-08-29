@@ -1,112 +1,112 @@
+/* ===== Wrapper / Título ===== */
 .sobre-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 120px;
-  }
-  
-  /* Título centralizado no topo */
-  .sobre-topo {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    font-weight: 100;
-  }
-  
-  .sobre-title {
-    font-size: 2.5rem;
-    color: #13293e;
-    line-height: 1.2;
-    text-align: center;
-  }
-  
-  .sobre-title .logo-n {
-    width: 250px;
-    vertical-align: middle;
-    margin: 0 6px;
-  }
-  
-  /* Seção Triângulo + Texto */
-  .sobre-section {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* alinha verticalmente */
-    padding-left: 500px;
-    padding-right: 60px;
-    margin-top: 0; /* sobe a seção */
-    min-height: 400px; /* altura adequada sem invadir footer */
-  }
-  
-  .sobre-left {
-    width: 0;
-    height: 0;
-    border-top: 300px solid transparent;
-    border-bottom: 300px solid transparent;
-    border-left: 600px solid #2c6d8f;
-    position: absolute;
-    top: 0; /* sobe o triângulo */
-    left: 0;
-    z-index: 1;
-    margin-top: -100px;
-  }
-  
-  .sobre-left-text {
-    position: absolute;
-    top: 50%;
-    left: -400px; /* posiciona dentro do triângulo */
-    transform: translateY(-50%);
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.4;
-    max-width: 220px;
-    z-index: 2;
-  }
-  
-  /* Texto à direita */
-  .sobre-right {
-    width: 60%;
-    padding: 40px 30px;
-    box-sizing: border-box;
-    text-align: left;
-    z-index: 3;
-    margin-left: 150px;
-  }
-  
-  .sobre-text p {
-    color: #333333;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-   
-  }
-  
-  .sobre-list h3 {
-    font-size: 1.2rem;
-    color: #333333;
-    margin-bottom: 16px;
-  }
-  
-  .sobre-list ul {
-    list-style: disc inside;
-    padding-left: 0;
-    color: #333333;
-  }
-  
-  .sobre-list li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-  }
-  
-  /* Faixa Laranja */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: clamp(80px, 12vw, 140px);
+}
+
+.sobre-topo {
+  text-align: center;
+  margin-top: clamp(40px, 6vw, 80px);
+  font-weight: 100;
+}
+
+.sobre-title {
+  font-size: clamp(28px, 3.8vw, 44px);
+  color: var(--brand-azul-700);
+  line-height: 1.2;
+}
+.sobre-title .logo-n {
+  width: clamp(160px, 18vw, 240px);
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+/* ===== Hero da seção ===== */
+.sobre-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: clamp(380px, 48vw, 520px);
+  width: 100%;
+  padding: clamp(20px, 4vw, 40px);
+}
+
+/* Triângulo azul (desktop) */
+.sobre-left {
+  position: absolute;
+  inset: 0 50% 0 0;
+  background: var(--brand-azul-500);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  z-index: 1;
+}
+
+/* Frase dentro do triângulo no desktop */
+.sobre-left-text {
+  position: absolute;
+  top: 50%;
+  left: clamp(20px, 5vw, 60px);
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 800;
+  line-height: 1.35;
+  max-width: 280px;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Blocos de texto à direita */
+.sobre-right {
+  width: var(--container);
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vw, 28px);
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 3;
+  margin: 0 auto;            /* remove o espaço gigante */
+}
+
+.sobre-text p {
+  color: #2b2f33;
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.sobre-text{
+  background-color: #ffffffa1;
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 0.5px solid #e1e4e8;
+}
+
+.sobre-list h3 {
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: #20262c;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.sobre-list ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #2d2f32;
+}
+.sobre-list li {
+  margin-bottom: 6px;
+  font-size: clamp(14px, 1.2vw, 17px);
+}
+
+/* ===== Faixa Laranja – citação ===== */
 .missao-banner {
-  margin-top: 50px;
-  background-color: #C0754D;
-  color: white;
-  padding: 70px;
-  font-size: 80px;
-  font-style: italic;
+  margin-top: clamp(28px, 5vw, 64px);
+  background: var(--brand-laranja);
+  color: #fff;
+  padding: clamp(28px, 5vw, 70px);
   text-align: center;
   width: 100%;
   position: relative;
@@ -114,169 +114,213 @@
 }
 .missao-banner p {
   margin: 0;
-  font-size: 2rem;
-  line-height: 2;
-  font-weight: 100;
-  margin-right: 90px;
-  margin-left: 90px;
+  font-size: clamp(18px, 2.6vw, 32px);
+  line-height: 1.6;
+  font-weight: 300;
+  margin-inline: clamp(12px, 6vw, 90px);
 }
 
+/* ===== Título Missão ===== */
 .missao-topo {
   text-align: center;
-  margin-top:200px;
- 
+  margin-top: clamp(28px, 6vw, 90px);
 }
 .missao-topo h2 {
   margin: 0;
-  font-size: 2.5rem;
-  color: #13293e;
-  font-weight:900;
+  font-size: clamp(24px, 3vw, 40px);
+  color: var(--brand-azul-700);
+  font-weight: 900;
 }
 
-
-  /* outra parte */
- 
-  /* full‑bleed wrapper */
+/* ===== Triângulos Missão ===== */
 .missao-wrapper {
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  margin-left: -100vw;
-  box-sizing: border-box;
 }
-
-
-
-/* ====== SEÇÃO DOS TRIÂNGULOS ====== */
 .missao-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;     /* permite o triângulo direito “cair” */
-  padding: 0 0vw;              /* reduz o gap lateral para aproximar */
-  height: 600px;               /* aumenta a altura geral */
-  box-sizing: border-box;
-  margin-top: -200px;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  padding: clamp(16px, 3vw, 24px) 0;
+  height: clamp(360px, 48vw, 560px);
+  margin-top: clamp(-80px, -8vw, -120px);
 }
-
-/* base comum dos dois triângulos */
 .triangulo-esquerda,
 .triangulo-direita {
-  flex: 0 0 45%;               /* cada um ocupa 45% da largura */
+  flex: 1;
   height: 100%;
   position: relative;
-  background: #2c6d8f;
+  background: var(--brand-azul-500);
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
 }
-
-/* forma de triângulo */
 .triangulo-esquerda {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
-
 .triangulo-direita {
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  margin-top: 100px;            /* desce o triângulo da direita */
+  margin-top: clamp(20px, 4vw, 80px);
 }
-
-/* texto interno */
 .texto-esquerda,
 .texto-direita {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  max-width: 40%;
+  color: #fff;
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.55;
+  max-width: 60%;
 }
+.texto-esquerda { right: 18%; text-align: left; }
+.texto-direita  { left: 18%;  text-align: right; }
 
-/* alinhamento horizontal */
-.texto-esquerda {
-  right: 30%;                  /* aproxima da ponta interna */
-  text-align: left;
-  
-}
-
-.texto-direita {
-  left: 40%;
-  text-align: right;
-}
-
-
-/* area participantes //////////////////////////////////////////// */
-
-/* ——— Time NEVEN ——— */
+/* ===== Time NEVEN (sem alterações visuais grandes) ===== */
 .time-section {
-  margin: 80px 0 120px;
-  padding: 0 60px; /* igual ao restante da sua página, ajuste se necessário */
+  margin: clamp(60px, 8vw, 120px) 0 clamp(80px, 10vw, 140px);
+  padding: 0 clamp(16px, 5vw, 60px);
 }
-
 .time-title {
-  font-size: 2.8rem;
-  color: #13293e;
-  margin-bottom: 80px;
+  font-size: clamp(24px, 3.4vw, 44px);
+  color: var(--brand-azul-700);
+  margin-bottom: clamp(24px, 5vw, 64px);
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
+.time-title .logo-n { width: clamp(130px, 14vw, 200px); }
 
-
-.time-title .logo-n {
-  width: 200px;
-  vertical-align: middle;
-  margin: 0 8px;
-}
-
-/* grid com 3 colunas, sobra espaço na última célula */
 .time-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 36px);
   justify-items: center;
+  width: var(--container);
+  margin-inline: auto;
 }
-
-/* cartão de cada participante */
 .time-card {
-  max-width: 260px;
+  width: 100%;
+  max-width: 300px;
   text-align: left;
+  padding: 18px;
+  border: 1px solid #eaecef;
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-1);
 }
-
 .avatar-placeholder {
-  width: 100px;
-  height: 100px;
-  background-color: #d3d3d3;
-  border: 2px solid #C0754D;
-  border-radius: 50%;
-  margin: 10 auto 22px;
+  width: 104px; height: 104px; background: #d3d3d3;
+  border: 2px solid var(--brand-laranja); border-radius: 999px; margin: 4px 0 18px;
 }
+.time-name { font-size: clamp(16px, 1.6vw, 20px); color: var(--brand-laranja); margin: 6px 0 4px; font-weight: 800; }
+.time-role { font-size: clamp(14px, 1.4vw, 18px); color: var(--brand-azul-700); margin: 0 0 10px; font-weight: 700; }
+.time-description { font-size: clamp(13px, 1.2vw, 16px); color: #2f3439; line-height: 1.5; }
 
-.time-name {
-  font-size: 1.4rem;
-  color: #C0754D;
-  margin: 8px 0 4px;
-}
-
-.time-role {
-  font-size: 1.1rem;
-  color: #13293e;
-  margin: 0 0 12px;
-  font-weight: 600;
-}
-
-.time-description {
-  font-size: 1rem;
-  color: #333333;
-  line-height: 1.4;
-  margin: 0;
-}
-/* —————————————— */
 .slogan-sobre p {
   margin: 0;
-  font-size: 2.5rem;
-  line-height: 2;
-  font-weight: 100;
-  margin-right: 90px;
-  margin-left: 90px;
-  color: #2c6d8f;
+  font-size: clamp(20px, 3vw, 40px);
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--brand-azul-500);
+  padding: clamp(10px, 2vw, 14px);
 }
+
+/* ===========================
+   RESPONSIVIDADE REAL OFICIAL
+   =========================== */
+
+/* Tablet (≤ 1024px): centraliza blocos e joga a frase pra baixo */
+@media (max-width: 1024px) {
+  /* some com o triângulo/fundo estranho */
+  .sobre-left { display: none; }
+
+  /* reorganiza a ordem da seção */
+  .sobre-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding-bottom: 20px;
+    gap: 12px;
+  }
+
+  /* blocos de conteúdo em cima e centralizados */
+  .sobre-right {
+    order: 1;
+    width: 100%;
+    max-width: 820px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .sobre-text p { text-align: center; }
+
+  .sobre-list {
+    text-align: center;
+  }
+  /* bullets alinhados bonitos ao centro (texto continua à esquerda) */
+  .sobre-list ul {
+    list-style-position: outside;
+    padding-left: 1.2rem;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 520px;
+  }
+
+  /* frase "Transformamos..." embaixo, sem fundo e menor */
+  .sobre-left-text {
+    position: static;
+    transform: none;
+    order: 2;
+    color: var(--brand-azul-700);
+    text-shadow: none;
+    text-align: center;
+    max-width: 90%;
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin-top: 8px;
+  }
+
+  /* Missão com layout vertical */
+  .missao-section {
+    flex-direction: column;
+    height: auto;
+    margin-top: -12px;
+  }
+  .triangulo-esquerda,
+  .triangulo-direita {
+    clip-path: none;
+    height: auto;
+    min-height: 160px;
+  }
+  .texto-esquerda,
+  .texto-direita {
+    position: relative;
+    left: auto; right: auto;
+    text-align: center;
+    max-width: 90%;
+    padding: 18px;
+  }
+
+  /* time em 2 colunas */
+  .time-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile (≤ 768px): ajustes finos de espaçamento e tipografia */
+@media (max-width: 768px) {
+  .sobre-title { font-size: clamp(24px, 6vw, 32px); }
+  .sobre-right { gap: 16px; }
+  .sobre-left-text { font-size: clamp(15px, 4vw, 18px); }
+  .missao-banner { padding: clamp(18px, 6vw, 28px); }
+}
+
+/* Mobile pequeno (≤ 520px): cards do time em 1 col */
+@media (max-width: 520px) {
+  .time-grid { grid-template-columns: 1fr; }
+}
+
+
+

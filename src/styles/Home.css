@@ -1,214 +1,97 @@
-/* Mantendo a Home original */
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 140px;
-  gap: 50px;
-  background-color: white;
+/* ===== Hero ===== */
+.home-container{
+  display:flex; align-items:center; justify-content:center;
+  gap: clamp(24px, 5vw, 56px);
+  padding: clamp(40px, 6vw, 120px) clamp(20px, 6vw, 140px);
+  background: var(--bg-0);
+}
+.home-text{
+  display:flex; flex-direction:column; gap:10px;
+  font-size: clamp(24px, 3.4vw, 40px);
+  color: var(--brand-azul-700); font-weight: 200;
+  text-align:left;
+}
+.home-logo{ width: clamp(180px, 18vw, 260px); height:auto; }
+.home-description{
+  font-size: clamp(14px, 1.25vw, 18px);
+  max-width: 560px; color: var(--brand-azul-700); text-align:left;
 }
 
-/* Estilos da Home */
-.home-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 2em;
-  color: #13293E;
-  font-style: normal;
-  font-weight: 100;
-  margin-bottom: 2px;
-  margin-right: 90px;
+/* ===== Faixa destaque ===== */
+.highlight-banner{
+  background: var(--brand-laranja);
+  color:#fff; padding: clamp(28px, 5vw, 64px);
+  font-size: clamp(22px, 3.2vw, 40px);
+  font-style: italic; text-align:center; width:100%;
+  position: relative; z-index:2;
 }
 
-.home-logo {
-  width: 250px;
+/* ===== Features ===== */
+.features{ display:flex; flex-direction:column; gap: clamp(40px, 8vw, 120px); align-items:center; width:100%; padding-bottom: clamp(80px, 10vw, 200px); position:relative; }
+.feature{ width:100%; position:relative; min-height: 160px; }
+
+.feature-text{
+  max-width: 680px; margin-inline:auto; position:relative; z-index:2;
+  background:#fff; padding: clamp(16px, 2.6vw, 28px);
+  border-radius: var(--radius); box-shadow: var(--shadow-1); border:1px solid #eef2f6;
+}
+.feature-text h3{
+  font-size: clamp(18px, 2vw, 24px); font-weight: 800; color: var(--brand-azul-700); margin-bottom: 6px;
+}
+.feature-text p{ font-size: clamp(14px, 1.4vw, 18px); color: var(--ink-700); }
+
+/* Triângulos decorativos já existentes */
+.triangle{ position:absolute; width:0; height:0; border-style:solid; opacity:.9; filter: drop-shadow(0 10px 20px rgba(0,0,0,.08)); }
+.feature:first-child .triangle{
+  border-width: 180px 260px 180px 0;
+  border-color: transparent var(--brand-azul-600) transparent transparent;
+  right: max(-12px, -1vw); top: -90px;
+}
+.feature:nth-child(2) .triangle{
+  border-width: 180px 0 180px 260px;
+  border-color: transparent transparent transparent var(--brand-azul-600);
+  left: max(-12px, -1vw); top: -40px;
+}
+.feature:nth-child(3) .triangle{
+  border-width: 180px 260px 180px 0;
+  border-color: transparent var(--brand-azul-600) transparent transparent;
+  right: max(-12px, -1vw); top: -40px;
 }
 
-.home-description {
-  font-size: 1.1rem;
-  max-width: 400px;
-  color: #13293E;
-  text-align: left;
+/* Citação */
+.faq-quote{
+  font-size: clamp(26px, 3.6vw, 48px);
+  font-style: italic; color: var(--brand-laranja);
+  margin: clamp(10px, 2vw, 24px) 0;
 }
 
-/* Faixa laranja */
-.highlight-banner {
-  background-color: #C0754D;
-  color: white;
-  padding: 60px;
-  font-size: 40px;
-  font-style: italic;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+/* ===== Conecte-se ===== */
+.conecte-se-section{
+  background:#fff; padding: clamp(40px, 6vw, 80px) 20px; text-align:center; margin-top: 20px; margin-bottom: clamp(-40px, -8vw, -120px);
 }
-
-/* Seção "Por que escolher a Neven?" */
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 200px; /* Mais espaço antes do footer */
-  position: relative;
+.conecte-se-title{
+  display:inline-flex; align-items:center; gap:12px;
+  font-size: clamp(24px, 3.2vw, 44px); color: var(--brand-laranja); margin-bottom: 20px;
 }
-
-/* Cada item */
-.feature {
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  justify-content: space-between;
-  position: relative;
-  min-height: 180px; /* Garante que os triângulos fiquem bem posicionados */
+.logo-n{ width: clamp(130px, 14vw, 200px); height:auto; }
+.conecte-se-content p{
+  font-size: clamp(14px, 1.3vw, 18px); color: #333;
+  max-width: 760px; margin: 0 auto 14px; line-height:1.55; text-align:center;
 }
+.conecte-se-content a{ color: var(--brand-laranja); text-decoration: underline; }
+.conecte-se-content a:hover{ color:#A05A3C; }
 
-/* Texto */
-.feature-text {
-  max-width: 350px;
-  z-index: 2;
-  position: relative;
-  
+/* ===== Responsivo ===== */
+@media (max-width: 1024px){
+  .home-container{ padding-inline: clamp(20px, 5vw, 64px); }
 }
-
-.feature-text h3 {
-  font-size: 25px;
-  font-weight: bold;
-  color: #13293E;
+@media (max-width: 768px){
+  .home-container{ flex-direction:column; text-align:center; }
+  .home-text{ text-align:center; }
 }
-
-.feature-text p {
-  font-size: 20px;
-  color: #13293E;
+@media (max-width: 480px){
+  .feature:first-child .triangle,
+  .feature:nth-child(2) .triangle,
+  .feature:nth-child(3) .triangle{ display:none; }
+  .feature-text{ box-shadow:none; border:1px solid #e9eef3; }
 }
-
-/* Centraliza o segundo texto */
-.feature:nth-child(2) .feature-text {
-  text-align: center;
-  margin: 0 auto;
-}
-
-/* Texto à esquerda */
-.feature:nth-child(odd) .feature-text {
-  text-align: left;
-  margin-left: 250px;
-  margin-top: 50px;
-}
-
-/* Texto à direita */
-.feature:nth-child(even) .feature-text {
-  text-align: right;
-  margin-left: 750px;
-  margin-bottom: 55px;
-}
-
-.feature:last-child .feature-text {
-  margin-left: 250px; /* Mantém a posição lateral */
-  margin-top: -90px; /* Aumente o valor negativo para subir mais */
-
-}
-
-
-/* Triângulos */
-.triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  position: absolute;
-}
-
-/* Primeiro triângulo - encostado na direita e abaixo da faixa */
-.feature:first-child .triangle {
-  border-width: 210px 300px 210px 0;
-  border-color: transparent #1C4E6C transparent transparent;
-  right: -5px;
-  top: -120px; /* Ajusta para ficar abaixo da faixa */
-}
-
-/* Segundo triângulo - encostado na esquerda */
-.feature:nth-child(2) .triangle {
-  border-width: 210px 0 210px 300px;
-  border-color: transparent transparent transparent #1C4E6C;
-  left: -5px;
-}
-
-/* Terceiro triângulo - encostado na direita */
-.feature:nth-child(3) .triangle {
-  border-width: 210px 300px 210px 0;
-  border-color: transparent #1C4E6C transparent transparent;
-  right: -5px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .feature {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .feature-text {
-      max-width: 90%;
-      text-align: center;
-  }
-
-  .triangle {
-      display: none;
-  }
-}
-
- /* Citação */
- .faq-quote {
-  font-size: 50px;
-  font-style: italic;
-  color: #c0754d;
-  margin-bottom: 20px;
-  margin-top: -15px;
-}
-
-
-/* ===== Seção “Conecte‑se” ===== */
-.conecte-se-section {
-  background-color: white;
-  padding: 80px 20px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: -190px;
-}
-
-.conecte-se-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 2.8rem;
-  color: #C0754D; 
-  margin-bottom: 40px;
-}
-
-.logo-n {
-  width: 200px;
-  height: auto;
-}
-
-.conecte-se-content p {
-  font-size: 20px;
-  color: #333333;
-  max-width: 700px;
-  margin: 0 auto 20px;
-  line-height: 1.5;
-  text-align: left;
-  margin-right: 400px;
-  margin-left: 360px;
-  
-}
-
-.conecte-se-content a {
-  color: #C0754D;
-  text-decoration: underline;
-}
-
-.conecte-se-content a:hover {
-  color: #A05A3C;
-}
-/* ============================= */

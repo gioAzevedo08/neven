@@ -1,84 +1,41 @@
-.contato {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .contato-texto h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: left;
-    margin-top: 2rem;
-  }
-  
-  .contato-texto p {
-    font-size: 1rem;
-    margin-bottom: 4rem;
-    text-align: left;
-    color: #000;
-  }
-  
-  .contato-texto h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .formulario {
-    background-color: #c37950;
-    padding: 1rem;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-bottom: 4rem;
-  }
-  
-  .formulario input {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    resize: none;
-  }
+.contato{
+  padding: clamp(28px, 5vw, 64px) 20px; max-width: var(--container); margin: 0 auto;
+  font-family: var(--font-sans);
+}
+.contato-texto h2{
+  font-size: clamp(20px, 2.4vw, 28px); font-weight: 800; margin-bottom: 8px; text-align:left; margin-top: 1rem; color: var(--brand-azul-700);
+}
+.contato-texto p{
+  font-size: clamp(14px, 1.2vw, 16px); margin-bottom: clamp(18px, 3vw, 28px); text-align:left; color: #1d232a;
+}
+.contato-texto h3{
+  font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 12px; text-align:left; color: var(--brand-azul-700);
+}
 
-  .formulario textarea {
-    width: 100%;
-    height: 160px; /* define a altura manualmente */
-    padding: 1rem 1rem 1rem 1rem; /* topo, direita, baixo, esquerda */
-    border: none;
-    border-radius: 4px;
-    resize: none;
-    box-sizing: border-box;
-    line-height: 1.5; /* melhora a leitura */
-  }
-  
-  
-  .formulario button {
-    align-self: flex-end;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .contato-icones {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    gap: 8rem;
-    font-size: 20px;
-  }
-  
-  .contato-icones img {
-    width: 40px;
-    margin-bottom: 0.5rem;
-  }
-  
+/* Form */
+.formulario{
+  background: var(--brand-laranja); padding: clamp(14px, 3vw, 18px);
+  border-radius: 12px; display:flex; flex-direction:column; gap: 12px; margin-bottom: 28px; color:#fff;
+}
+.formulario input, .formulario textarea{
+  width:100%; padding: .9rem 1rem; border: 1px solid rgba(255,255,255,.4);
+  border-radius: 10px; background: rgba(255,255,255,.98);
+  font-size: 1rem; color:#111; outline:none;
+}
+.formulario textarea{ height: 168px; resize: vertical; line-height:1.5; }
+.formulario button{
+  align-self:flex-end; padding: .65rem 1.4rem; border:none; background:#fff; color:#000; font-weight:800;
+  border-radius: 10px; cursor:pointer;
+}
 
- 
+/* Ícones / redes */
+.contato-icones{
+  display:flex; justify-content:center; align-items:center;
+  gap: clamp(18px, 6vw, 80px); font-size: clamp(14px, 1.6vw, 20px); flex-wrap: wrap; margin-top: 10px;
+}
+.contato-icones img{ width: clamp(30px, 3.8vw, 44px); margin-bottom: 6px; }
+
+/* Compact */
+@media (max-width: 640px){
+  .contato-texto h3{ text-align:center; }
+}

@@ -1,189 +1,70 @@
-/* Container principal */
-.ajuda-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #ffffff;
-  }
-  
-  /* Parte do topo com texto e imagem */
-  .ajuda-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    margin-bottom: 40px;
-    gap: 40px;
-  }
-  
-  .ajuda-texto {
-    flex: 1;
-  }
-  
-  .ajuda-titulo {
-    font-size: 2.6rem;
-    color: black;
-    margin: 0;
-    font-weight: 400;
-    margin-left: 120px;
-    text-align: left;
-  }
-  
-  .ajuda-descricao {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: black;
-    text-align: left;
-    margin-left: 120px;
-    /* margin-right: 120px; */
-  }
-  
-  .ajuda-imagem {
-    flex: 1;
-    max-width: 20%;
-    height: auto;
-    margin-left: 30px;
-    margin-right: 120px;
-    
-  }
-  
-  /* Lista das perguntas */
-  .ajuda-lista {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 1000px;
-  }
-  
-  /* Item da pergunta */
-  .ajuda-item {
-    background: #D6D6D6;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%;
-    min-height: 50px;
-  }
-  
-  /* Botão com pergunta */
-  .ajuda-pergunta {
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    font-size: 1.1rem;
-    display: flex;
-    border: none;
-    background: none;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    color: #13293E;
-    min-height: 70px;
-  }
-  
-  /* Ícone + */
-  .ajuda-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .ajuda-icon.open {
-    transform: rotate(45deg);
-  }
-  
-  /* Resposta que aparece ao clicar */
-  .ajuda-resposta {
-    padding: 15px;
-    text-align: left;
-    background: #EAEAEA;
-    font-size: 1rem;
-    color: #333;
-    width: 100%;
-  }
-  
+.ajuda-container{
+  display:flex; flex-direction:column; align-items:center;
+  padding: clamp(40px, 6vw, 80px) 20px; background:#fff;
+}
+.ajuda-topo{
+  display:flex; justify-content:space-between; align-items:center;
+  width: var(--container); gap: clamp(20px, 4vw, 40px); margin-bottom: clamp(20px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+.ajuda-texto{ flex:1; min-width: 280px; }
+.ajuda-titulo{
+  font-size: clamp(24px, 3.2vw, 42px); color: var(--ink-900); margin:0; font-weight: 800; text-align:left;
+}
+.ajuda-descricao{
+  font-size: clamp(14px, 1.3vw, 18px); margin-top: 12px; color: var(--ink-900); text-align:left; max-width: 720px;
+}
+.ajuda-imagem{
+  flex:1; max-width: min(340px, 42%); height:auto; margin-left:auto;
+}
 
+/* Lista */
+.ajuda-lista{ width: var(--container); margin-top: 10px; }
+.ajuda-item{
+  background:#f2f4f7; margin-bottom: 8px; border-radius: 12px; overflow:hidden; width:100%;
+  border:1px solid #e7ecf1;
+}
+.ajuda-pergunta{
+  width:100%; text-align:left; padding: 16px 18px; font-size: clamp(14px, 1.3vw, 18px);
+  display:flex; justify-content:space-between; align-items:center; cursor:pointer; color: var(--brand-azul-700);
+  background: linear-gradient(#fff, #fbfdff);
+}
+.ajuda-icon{ font-size: 1.5rem; transition: transform .25s ease, color .25s ease; color: var(--brand-azul-600); }
+.ajuda-icon.open{ transform: rotate(45deg); color: var(--brand-laranja); }
+.ajuda-resposta{
+  padding: 16px 18px; text-align:left; background:#ffffff; font-size: clamp(13px, 1.2vw, 16px); color:#2f3439; border-top:1px solid #eef2f6;
+}
 
+/* Form de contato final */
+.contato{ padding: clamp(24px, 4vw, 40px) 0; max-width: var(--container); margin: 0 auto; }
+.contato-texto h2{ display:none; } /* não usado aqui */
+.contato-texto p{ font-size: clamp(14px,1.2vw,16px); margin-bottom: 18px; text-align:center; color: var(--ink-700); }
+.contato-texto h3{
+  font-size: clamp(20px,2.2vw,28px); margin: 8px 0 18px; text-align:center; color: var(--brand-azul-700);
+}
+.formulario{
+  background: var(--brand-azul-600); padding: clamp(14px, 3vw, 18px);
+  border-radius: 12px; display:flex; flex-direction:column; gap: 12px; margin-bottom: 20px; color:#fff;
+}
+.formulario input, .formulario textarea{
+  width:100%; padding: .85rem 1rem; border: 1px solid rgba(255,255,255,.4);
+  border-radius: 10px; background: rgba(255,255,255,.98);
+  font-size: 1rem; color:#111; outline:none;
+}
+.formulario textarea{ height: 160px; resize: vertical; line-height:1.5; }
+.formulario button{
+  align-self:flex-end; padding: .65rem 1.4rem; border:none; background:#fff; color:#000; font-weight:800;
+  border-radius: 10px; cursor:pointer;
+}
+.other-contact{
+  margin-top: .25rem; font-size:.95rem; color: var(--brand-azul-700); text-decoration: underline; text-align:left; display:inline-block;
+}
 
-
-
-
-  .contato {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .contato-texto h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: right;
-    margin-top: 2rem;
-  }
-  
-  .contato-texto p {
-    font-size: 1rem;
-    margin-bottom: 4rem;
-    text-align: right;
-    color: #fff;
-  }
-  
-  .contato-texto h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .formulario {
-    background-color:#317695;
-    padding: 1rem;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-bottom: 4rem;
-  }
-  
-  .formulario input {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    resize: none;
-  }
-
-  .formulario textarea {
-    width: 100%;
-    height: 160px; /* define a altura manualmente */
-    padding: 1rem 1rem 1rem 1rem; /* topo, direita, baixo, esquerda */
-    border: none;
-    border-radius: 4px;
-    resize: none;
-    box-sizing: border-box;
-    line-height: 1.5; /* melhora a leitura */
-    
-  }
-  
-  
-  .formulario button {
-    align-self: flex-end;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-/* ------------------------------------------------
-   6) Link de outras formas de contato
-   ------------------------------------------------ */
-.other-contact {
-  margin-top: 0.1rem;
-  font-size: 0.9rem;
-  color: #13293E;
-  text-decoration: underline;
-  text-align: left;
+/* Responsivo */
+@media (max-width: 768px){
+  .ajuda-imagem{ max-width: 60%; margin-inline:auto; }
+  .contato-texto p{ text-align:left; }
+}
+@media (max-width: 480px){
+  .ajuda-imagem{ max-width: 80%; }
 }
