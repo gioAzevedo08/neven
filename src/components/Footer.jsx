@@ -31,7 +31,7 @@ export default function Footer(){
           <div className="footer-section">
             <h4>Conecte-se</h4>
             <div className="footer-social">
-              <a href="https://www.instagram.com/seu_perfil" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/neven.dev" target="_blank" rel="noopener noreferrer">
                 <img src={instagramIcon} alt="Instagram" />
               </a>
               <a href="https://www.linkedin.com/in/seu_perfil" target="_blank" rel="noopener noreferrer">

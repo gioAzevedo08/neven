@@ -5,8 +5,11 @@ import giovanaA from "../assets/team/giovana-azevedo.png";
 import juliaV from "../assets/team/julia.png";
 import kalebB from "../assets/team/kaleb.png";
 import leticiaV from "../assets/team/leticia.png";
+import BackToTop from "../components/BackToTop";
+
 export default function Sobre(){
   return (
+
     <div className="sobre-wrapper">
       <div className="sobre-topo reveal">
         <h2 className="sobre-title">
@@ -76,28 +79,28 @@ export default function Sobre(){
           </div>
 
           <div className="time-card scale-hover">
-            <div className="avatar-placeholder" />
+            <img className="avatar-placeholder" src={giovanaM} alt="Giovana Moura" loading="lazy" width="104" height="104" />
             <h3 className="time-name">Giovana Moura</h3>
             <p className="time-role">Gerente de Banco de Dados</p>
             <p className="time-description">Estruturação e otimização de dados com segurança e eficiência.</p>
           </div>
 
           <div className="time-card scale-hover">
-            <div className="avatar-placeholder" />
+            <img className="avatar-placeholder" src={juliaV} alt="Júlia Vasconcellos" loading="lazy" width="104" height="104" />
             <h3 className="time-name">Júlia Vasconcellos</h3>
             <p className="time-role">Gerente de Design</p>
             <p className="time-description">Layouts e identidades visuais envolventes e intuitivas.</p>
           </div>
 
           <div className="time-card scale-hover">
-            <div className="avatar-placeholder" />
+             <img className="avatar-placeholder" src={kalebB} alt="Kaleb Bastos" loading="lazy" width="104" height="104" />
             <h3 className="time-name">Kaleb Bastos</h3>
             <p className="time-role">Gerente de Desenvolvimento Back-end</p>
             <p className="time-description">Lógica de sistema, banco de dados e integrações robustas.</p>
           </div>
 
           <div className="time-card scale-hover">
-            <div className="avatar-placeholder" />
+             <img className="avatar-placeholder" src={leticiaV} alt="Letícia Viturino" loading="lazy" width="104" height="104" />
             <h3 className="time-name">Letícia Viturino</h3>
             <p className="time-role">Gerente de Desenvolvimento Front-end</p>
             <p className="time-description">Interfaces modernas e acessíveis com foco no usuário.</p>
@@ -108,6 +111,8 @@ export default function Sobre(){
       <div className="slogan-sobre">
         <p>“Neven, onde suas ideias ganham forma”</p>
       </div>
+
+      <BackToTop />
     </div>
   );
 }

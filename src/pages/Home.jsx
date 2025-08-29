@@ -28,7 +28,7 @@ export default function Home(){
       <div className="features">
         <div className="feature container">
           <div className="triangle left"></div>
-          <div className="feature-text soft-border scale-hover">
+          <div className="feature-text  ">
             <h3>1. Inovação constante</h3>
             <p>Buscamos ideias novas e soluções criativas para elevar cada entrega.</p>
           </div>
@@ -36,7 +36,7 @@ export default function Home(){
 
         <div className="feature container">
           <div className="triangle right"></div>
-          <div className="feature-text soft-border scale-hover">
+          <div className="feature-text  ">
             <h3>2. Compromisso com a qualidade</h3>
             <p>Padrões elevados para garantir excelência e impacto real.</p>
           </div>
@@ -44,7 +44,7 @@ export default function Home(){
 
         <div className="feature container">
           <div className="triangle left"></div>
-          <div className="feature-text soft-border scale-hover">
+          <div className="feature-text  ">
             <h3>3. Foco no usuário</h3>
             <p>Experiências que fazem sentido para quem usa de verdade.</p>
           </div>

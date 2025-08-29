@@ -1,5 +1,6 @@
-import './App.css'
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -7,13 +8,15 @@ import Sobre from "./pages/Sobre";
 import FAQ from "./pages/FAQ";
 import Contato from "./pages/Contato";
 import Projetos from "./pages/Projetos";
-import SeuSite from './pages/SeuSite';
+import SeuSite from "./pages/SeuSite";
+import BackToTop from "./components/BackToTop";
 
 export default function App() {
   return (
     <Router>
       <div className="app-shell">
         <Header />
+
         <main className="main-content" id="content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -24,6 +27,7 @@ export default function App() {
             <Route path="/seusite" element={<SeuSite />} />
           </Routes>
         </main>
+<BackToTop targetId="content" threshold={300} />
         <Footer />
       </div>
     </Router>

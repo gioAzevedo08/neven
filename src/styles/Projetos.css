@@ -3,6 +3,7 @@
   padding: var(--pad-section) 20px 80px;
   text-align:left; font-family: var(--font-sans);
 }
+
 .projetos-container h2{
   font-size: clamp(22px, 3vw, 36px); margin-bottom: 12px; color: var(--brand-azul-700);
 }
@@ -32,7 +33,7 @@
   background: #f7f9fb; color:#64707d; font-size: 1.05rem; border-radius: 16px;
 }
 
-.link-acesso{ margin-top: .5rem; }
+.link-acesso{ margin-top: .5rem; text-align: center; }
 .link-acesso a{
   text-decoration: underline; color: var(--brand-azul-500); font-weight: 800;
 }
@@ -48,4 +49,35 @@
 /* compact */
 @media (max-width: 768px){
   .image-placeholder{ max-width: 100%; }
+}
+
+
+/* vídeos como “GIF” */
+.media-card{
+  width: 100%;
+  max-width: 420px;
+  height: clamp(180px, 26vw, 260px);
+  
+  display: block;
+  
+  box-shadow: 0 8px 24px rgba(17,24,39,.12);
+  border: none; outline: none;
+  object-fit: cover;         /* cobre sem distorcer */
+  object-position: center;
+}
+.rw-lage{
+  width: 100%;
+  align-items: center;
+  margin-top: 10vw;
+}
+.large-media-card{
+  width: 60%;
+  height: clamp(220px, 34vw, 360px);
+  
+  display: block;
+ 
+  box-shadow: 0 8px 24px rgba(17,24,39,.12);
+  border: none; outline: none;
+  object-fit: cover;
+  object-position: center;
 }
