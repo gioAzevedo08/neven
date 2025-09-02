@@ -61,7 +61,7 @@ export default function Home(){
           </h2>
           <div className="conecte-se-content">
             <p>Quer saber mais sobre o nosso grupo e acompanhar nossos projetos? Estamos sempre abertos a novas conexões!</p>
-            <p>Envie uma mensagem, siga nossas <Link to="/redes">redes sociais</Link> ou entre em contato por <Link to="/contato">e-mail</Link>.</p>
+            <p>Envie uma mensagem, siga nossas <Link to="/contato">redes sociais</Link> ou entre em contato por <Link to="/contato">e-mail</Link>.</p>
             <p>Confira nossa página de <Link to="/contato">contato</Link></p>
           </div>
         </div>

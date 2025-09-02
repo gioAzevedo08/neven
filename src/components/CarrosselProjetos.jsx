@@ -31,7 +31,7 @@ export default function CarrosselProjetos(){
             <Link to={current.href} className="placeholder" aria-label="Ver projetos" />
           )}
           <p className="nome-projeto">
-            {current.imagem ? current.nome : <a href="/projetos">Em breve...</a>}
+            {current.imagem ? current.nome : <Link to="/projetos">Em breve...</Link>}
           </p>
         </div>
 
