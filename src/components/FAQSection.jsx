@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FAQSection.css";
-
+import { Link } from "react-router-dom";
 const faqs = [
   { question: "Quais tipos de sites vocês desenvolvem?", answer: "Desenvolvemos sites institucionais, lojas virtuais, blogs e plataformas personalizadas." },
   { question: "Posso integrar meu site a redes sociais e outros serviços?", answer: "Sim! Integramos com Instagram, WhatsApp, Analytics e muito mais." },
@@ -17,7 +17,7 @@ export default function FAQSection(){
       <div className="faq-content">
         <h2 className="faq-title"> Alguma <br /><span>Dúvida?</span></h2>
         <p className="faq-description">
-          Caso tenha alguma dúvida, confira nossa página <a href="/faq">posso te ajudar?</a> ou fale conosco pelas nossas <a href="/contato">redes sociais</a>.
+          Caso tenha alguma dúvida, confira nossa página <Link to="/faq">posso te ajudar?</Link> ou fale conosco pelas nossas <Link to="/contato">redes sociais</Link>.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ export default function FAQSection(){
       </div>
 
       <div className="faq-footer">
-        <a href="/faq" className="faq-link">confira outras perguntas frequentes</a>
+        <Link to="/faq" className="faq-link">confira outras perguntas frequentes</Link>
       </div>
     </div>
   );

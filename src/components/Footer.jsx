@@ -3,6 +3,7 @@ import logo from "../assets/nevenfooter.png";
 import instagramIcon from "../assets/instagram.png";
 import linkedinIcon from "../assets/linkedin.png";
 import emailIcon from "../assets/email.png";
+import { Link } from "react-router-dom";
 
 export default function Footer(){
   return (
@@ -15,31 +16,31 @@ export default function Footer(){
         <div className="footer-links">
           <div className="footer-section">
             <h4>Início</h4>
-            <a href="/">Home</a>
-            <a href="/sobre">Nosso Time</a>
-            <a href="/seusite">Seu Site</a>
+            <Link to="/">Home</Link>
+            <Link to="/sobre">Nosso Time</Link>
+            <Link to="/seusite">Seu Site</Link>
           </div>
           <div className="footer-section">
             <h4>Empresa</h4>
-            <a href="/sobre">Sobre Nós</a>
-            <a href="/contato">Contato</a>
+            <Link to="/sobre">Sobre Nós</Link>
+            <Link to="/contato">Contato</Link>
           </div>
           <div className="footer-section">
             <h4>Ajuda</h4>
-            <a href="/faq">FAQ</a>
+            <Link to="/faq">FAQ</Link>
           </div>
           <div className="footer-section">
             <h4>Conecte-se</h4>
             <div className="footer-social">
-              <a href="https://www.instagram.com/neven.dev" target="_blank" rel="noopener noreferrer">
+              <Link to="https://www.instagram.com/neven.dev" target="_blank" rel="noopener noreferrer">
                 <img src={instagramIcon} alt="Instagram" />
-              </a>
-              <a href="https://www.linkedin.com/in/seu_perfil" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link to="https://www.linkedin.com/in/seu_perfil" target="_blank" rel="noopener noreferrer">
                 <img src={linkedinIcon} alt="LinkedIn" />
-              </a>
-              <a href="mailto:seuemail@example.com">
+              </Link>
+              <Link to="/contato">
                 <img src={emailIcon} alt="E-mail" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

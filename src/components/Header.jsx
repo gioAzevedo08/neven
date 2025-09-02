@@ -17,7 +17,7 @@ export default function Header(){
 
   return (
     <header className="site-header" role="banner">
-      <a className="skip-link" href="#content">Pular para o conteúdo</a>
+      <Link className="skip-link" to="#content">Pular para o conteúdo</Link>
       <div className="header-inner">
         <div className="brand">
           <Link to="/" aria-label="Ir para a Home">
