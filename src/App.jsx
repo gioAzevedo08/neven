@@ -9,11 +9,12 @@ import FAQ from "./pages/FAQ";
 import Contato from "./pages/Contato";
 import Projetos from "./pages/Projetos";
 import SeuSite from "./pages/SeuSite";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-shell">
         <Header />
 
