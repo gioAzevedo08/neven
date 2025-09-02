@@ -6,7 +6,7 @@ import bannerNeven from "../assets/banner.png"
 import bannerNatalia from "../assets/bannernatalia.png"
 
 const projetos = [
-  { id: 1, nome: "Natália Simanoviski", imagem:bannerNatalia , href: "/projetos" },
+  { id: 1, nome: "Natália Simanoviski", imagem:bannerNatalia , href: "https://neven.vercel.app/projetos" },
   { id: 2, nome: "Em breve...", imagem: bannerNeven, href: "/projetos" }
 ];
 
