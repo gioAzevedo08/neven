@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import setaEsquerda from "../assets/seta-e.png";
-import setaDireita from "../assets/seta-d.png";
 import "./CarrosselProjetos.css";
-import bannerNeven from "../assets/banner.png"
-import bannerNatalia from "../assets/bannernatalia.png"
+import bannerNeven from "../assets/banner.png";
+import bannerNatalia from "../assets/bannernatalia.png";
 import { Link } from "react-router-dom";
+
 const projetos = [
-  { id: 1, nome: "Natália Simanoviski", imagem:bannerNatalia , href: "/projetos" },
+  { id: 1, nome: "Natália Simanoviski", imagem: bannerNatalia, href: "/projetos" },
   { id: 2, nome: "Em breve...", imagem: bannerNeven, href: "/projetos" }
 ];
 
-export default function CarrosselProjetos(){
+
+export default function CarrosselProjetos() {
   const [index, setIndex] = useState(0);
   const next = () => setIndex((p) => (p + 1) % projetos.length);
   const prev = () => setIndex((p) => (p - 1 + projetos.length) % projetos.length);
@@ -19,8 +19,12 @@ export default function CarrosselProjetos(){
 
   return (
     <div className="carrossel" role="region" aria-label="Carrossel de projetos">
+      {/* Seta esquerda (mesmo SVG, espelho no CSS) */}
       <button className="seta seta-esquerda" onClick={prev} aria-label="Projeto anterior">
-        <img src={setaEsquerda} alt="" />
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          {/* chevron sólido */}
+          <path d="M9 5l7 7-7 7V5z" />
+        </svg>
       </button>
 
       <div className="conteudo-carrossel">
@@ -41,8 +45,11 @@ export default function CarrosselProjetos(){
         </div>
       </div>
 
+      {/* Seta direita */}
       <button className="seta seta-direita" onClick={next} aria-label="Próximo projeto">
-        <img src={setaDireita} alt="" />
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 5l7 7-7 7V5z" />
+        </svg>
       </button>
     </div>
   );

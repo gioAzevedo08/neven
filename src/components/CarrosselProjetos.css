@@ -11,21 +11,40 @@
   gap: clamp(14px, 4vw, 32px);
   margin-top: 8px;
 }
-.seta {
-  background: none;
-  border: none;
-  padding: 0;
+/* --- SETAS NOVAS --- */
+.seta{
+  --idle: #E6F1FF;                  /* alice blue vibes */
+  --hover: #FFFFFF;
+  --active: var(--brand-laranja);
+  --bg: rgba(255,255,255,.10);
+
+  width: clamp(48px, 6vw, 64px);
+  height: clamp(48px, 6vw, 64px);
+  display: grid;
+  place-items: center;
+  margin: 0 clamp(16px, 8vw, 160px);
+  background: #00000000;
+ border: none;
+  border-radius: 999px;
+  color: var(--idle);               /* define a cor do SVG */
   cursor: pointer;
   outline: none;
+  transition: color .2s ease, transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  
 }
-.seta img {
-  width: clamp(42px, 6vw, 80px);
-  height: auto;
-}
-.seta:focus-visible {
-  outline: 3px solid var(--brand-laranja);
-  border-radius: 10px;
-}
+
+/* garante que a seta fique visível MESMO se houver CSS global */
+.seta svg { width: 200%; height: 200%; display: block; }
+.seta svg path { fill: currentColor; stroke: none; }
+
+/* vira a seta da esquerda */
+.seta-esquerda svg { transform: scaleX(-1); }
+
+.seta:hover { color: var(--hover); transform: translateY(-1px); }
+.seta:active { color: var(--active); transform: scale(.96);  }
+.seta:focus-visible { box-shadow: 0 0 0 3px var(--brand-laranja), 0 8px 22px rgba(17,24,39,.18); }
+
+
 
 .conteudo-carrossel {
   max-width: 1200px;
@@ -86,9 +105,6 @@
 }
 
 /* Espaços laterais das setas em telas grandes */
-.seta {
-  margin: 0 clamp(16px, 8vw, 160px);
-}
 
 /* Responsivo */
 @media (max-width: 1024px) {
