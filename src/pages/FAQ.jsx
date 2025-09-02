@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/FAQ.css";
-import ajudaImg from '../assets/comp.png';
+import ajudaImg from '../assets/note.png';
 import { Link } from "react-router-dom";
 const ajuda = [
   { question: "Quais são os horários de atendimento?", answer: "Segunda a sexta, das 9h às 18h." },
