@@ -4,7 +4,7 @@ import "../styles/Projetos.css";
 import v1 from "../assets/media/sessao-video-um.mp4";
 import v2 from "../assets/media/sessao-video-dois.mp4";
 import v3 from "../assets/media/sessao-video-tres.mp4";
-
+import { Link } from "react-router-dom";
 export default function Projetos(){
   return (
     <div className="projetos-container">
@@ -49,7 +49,7 @@ export default function Projetos(){
           <p className="descricao">
             <strong>Quer ver o seu projeto aqui também?</strong> A gente transforma sua ideia
             em um site moderno, responsivo e com desempenho top.{" "}
-            <a href="/contato">Fale conosco</a> e vamos tirar do papel. 🚀
+            <Link to="/contato">Fale conosco</Link> e vamos tirar do papel. 🚀
           </p>
         </div>
       </div>

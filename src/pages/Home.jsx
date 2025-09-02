@@ -3,7 +3,7 @@ import logo from "../assets/logoazul.png";
 import FAQSection from "../components/FAQSection";
 import CarrosselProjetos from "../components/CarrosselProjetos";
 import logoN from "../assets/logolaranja.png";
-
+import { Link } from "react-router-dom";
 export default function Home(){
   return (
     <section>
@@ -61,8 +61,8 @@ export default function Home(){
           </h2>
           <div className="conecte-se-content">
             <p>Quer saber mais sobre o nosso grupo e acompanhar nossos projetos? Estamos sempre abertos a novas conexões!</p>
-            <p>Envie uma mensagem, siga nossas <a href="/redes">redes sociais</a> ou entre em contato por <a href="/contato">e-mail</a>.</p>
-            <p>Confira nossa página de <a href="/contato">contato</a></p>
+            <p>Envie uma mensagem, siga nossas <Link to="/redes">redes sociais</Link> ou entre em contato por <Link to="/contato">e-mail</Link>.</p>
+            <p>Confira nossa página de <Link to="/contato">contato</Link></p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/FAQ.css";
 import ajudaImg from '../assets/comp.png';
-
+import { Link } from "react-router-dom";
 const ajuda = [
   { question: "Quais são os horários de atendimento?", answer: "Segunda a sexta, das 9h às 18h." },
   { question: "Como posso entrar em contato?", answer: "E-mail, telefone ou redes sociais." },
@@ -58,7 +58,7 @@ export default function AjudaSection(){
           <button type="submit">ENVIAR</button>
         </form>
 
-        <a href="/contato" className="other-contact">Confira outras formas de contato.</a>
+        <Link to="/contato" className="other-contact">Confira outras formas de contato.</Link>
       </section>
     </div>
   );

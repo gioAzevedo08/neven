@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function SeuSite(){
   return (
     <div style={styles.container} className="reveal">
       <h1 style={styles.errorCode}>404</h1>
       <p style={styles.errorMessage}>Oops! Parece que essa página ainda não existe...</p>
       <p style={styles.suggestion}>Mas podemos criar ela para você!</p>
-      <a href="/contato" style={styles.link}>Falar com a Neven →</a>
+      <Link to="/contato" style={styles.link}>Falar com a Neven →</Link>
     </div>
   );
 }

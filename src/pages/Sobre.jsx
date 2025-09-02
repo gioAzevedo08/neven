@@ -5,7 +5,7 @@ import giovanaA from "../assets/team/giovana-azevedo.png";
 import juliaV from "../assets/team/julia.png";
 import kalebB from "../assets/team/kaleb.png";
 import leticiaV from "../assets/team/leticia.png";
-
+import { Link } from "react-router-dom";
 
 export default function Sobre(){
   return (

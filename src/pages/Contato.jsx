@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import React from 'react';
 import '../styles/Contato.css'; // ou contato.css se preferir separar
 import emailIcon from '../assets/emailazul.png';
