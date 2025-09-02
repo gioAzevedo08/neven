@@ -5,7 +5,7 @@ import giovanaA from "../assets/team/giovana-azevedo.png";
 import juliaV from "../assets/team/julia.png";
 import kalebB from "../assets/team/kaleb.png";
 import leticiaV from "../assets/team/leticia.png";
-import BackToTop from "../components/BackToTop";
+
 
 export default function Sobre(){
   return (
@@ -112,7 +112,7 @@ export default function Sobre(){
         <p>“Neven, onde suas ideias ganham forma”</p>
       </div>
 
-      <BackToTop />
+
     </div>
   );
 }
