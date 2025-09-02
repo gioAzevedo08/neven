@@ -9,7 +9,7 @@ import FAQ from "./pages/FAQ";
 import Contato from "./pages/Contato";
 import Projetos from "./pages/Projetos";
 import SeuSite from "./pages/SeuSite";
-import BackToTop from "./components/BackToTop";
+
 
 export default function App() {
   return (
@@ -27,7 +27,7 @@ export default function App() {
             <Route path="/seusite" element={<SeuSite />} />
           </Routes>
         </main>
-<BackToTop targetId="content" threshold={300} />
+
         <Footer />
       </div>
     </Router>
