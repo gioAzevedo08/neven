@@ -69,8 +69,8 @@ export default function Projetos(){
       </div>
 
       <p className="link-acesso">
-        <a href="https://tcc-nutri.vercel.app" target="_blank" rel="noreferrer">
-          Clique e acesse o site da nossa cliente, Natália Simanovski!
+        <a href="#" target="_blank" rel="noreferrer">
+          EM BREVE || Acesse o site da nossa cliente, Natália Simanovski!
         </a>
       </p>
     </div>
