@@ -34,7 +34,7 @@ export default function FAQSection(){
       </div>
 
       <div className="faq-footer">
-        <Link to="/faq" className="faq-link">confira outras perguntas frequentes</Link>
+        <Link to="/faq" className="faq-link">Confira outras perguntas frequentes</Link>
       </div>
     </div>
   );
