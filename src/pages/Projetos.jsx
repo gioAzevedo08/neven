@@ -67,12 +67,11 @@ export default function Projetos(){
           aria-label="Preview em destaque — sessão 3"
         />
       </div>
-
-      <p className="link-acesso">
-        <a href="#" target="_blank" rel="noreferrer">
-          EM BREVE || Acesse o site da nossa cliente, Natália Simanovski!
-        </a>
-      </p>
+        <Link to="#" target="_blank" rel="noreferrer">
+          <p className="link-acesso">
+              EM BREVE || Acesse o site da nossa cliente, Natália Simanovski!
+          </p>
+        </Link>
     </div>
   );
 }
