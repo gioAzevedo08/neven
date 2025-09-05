@@ -49,7 +49,7 @@ export default function Projetos(){
           <p className="descricao">
             <strong>Quer ver o seu projeto aqui também?</strong> A gente transforma sua ideia
             em um site moderno, responsivo e com desempenho top.{" "}
-            <Link to="/contato">Fale conosco</Link> e vamos tirar do papel. 🚀
+            <Link to="/contato">Fale conosco</Link> e vamos tirar do papel. 
           </p>
         </div>
       </div>
